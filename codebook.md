@@ -5,7 +5,7 @@ Codebook
 
 The following steps were followed to produce the tidy data set:
 
-`STATE ONE `
+`STAGE ONE `
 
 * Downloaded the `.zip` file from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) and we
 *  extracted the files into our working directory.
@@ -20,7 +20,7 @@ The following steps were followed to produce the tidy data set:
   -- the 7352x1 data frame `Y_train`. 
   
 
-`STATE TWO`
+`STAGE TWO`
 
 We used rbind() to combine `X_train` and `X_test` into a 10299x561 data frame called `data`.
 * We used the data frame `features` and the function `make.names()` to provide valid and unique names for the corresponding columns of the data frame `data`.
@@ -29,7 +29,7 @@ by using the `grepl()` function to keep only names with main() and std() in them
 This resulted in `data` becoming a 10299x66 data frame.
 
  
-`STATE THREE`
+`STAGE THREE`
 
 * By combining `subject_train` and `subject_test`, we made a 561x1 data frame, which we appended to the end of our data, with the name "Subject", 
    ---  making `data` a 10299x67 data frame.
